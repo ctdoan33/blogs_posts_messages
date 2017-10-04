@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
     validates :title, length:{minimum:7}
     has_many :messages, :dependent => :destroy
     belongs_to :blog
+    belongs_to :user
 end
